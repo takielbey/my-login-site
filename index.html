@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول في موقع best shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-box" id="login-box">
+    <h2>تسجيل الدخول</h2>
+    <form onsubmit="login(event)">
+      <input type="text" id="login-username" placeholder="اسم المستخدم" required>
+      <input type="password" id="login-password" placeholder="كلمة السر" required>
+      <button type="submit">دخول</button>
+    </form>
+    <p><a href="#" onclick="showRegister()">إنشاء حساب جديد</a></p>
+    <p id="login-message"></p>
+  </div>
+
+  <div class="login-box" id="register-box" style="display: none;">
+    <h2>إنشاء حساب</h2>
+    <form onsubmit="register(event)">
+      <input type="text" id="register-username" placeholder="اسم المستخدم" required>
+      <input type="password" id="register-password" placeholder="كلمة السر" required>
+      <button type="submit">تسجيل</button>
+    </form>
+    <p><a href="#" onclick="showLogin()">رجوع لتسجيل الدخول</a></p>
+    <p id="register-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

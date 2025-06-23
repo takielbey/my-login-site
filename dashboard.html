@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial';
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      text-align: center;
+    }
+
+    .top-bar {
+      background-color: #2e8b57;
+      color: white;
+      padding: 15px;
+      text-align: right;
+      padding-right: 30px;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logout-btn {
+      background: crimson;
+      color: white;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .logout-btn:hover {
+      background: darkred;
+    }
+
+    .dashboard {
+      padding: 40px 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .social-links a:hover {
+      background-color: #555;
+    }
+
+    .image-link-box {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      margin: 40px auto;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .image-link-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px black;
+    }
+  </style>
+</head>
+<body>
+
+ 
+
+  <div class="dashboard">
+    <h2>مرحبًا بك في موقع باست شوب هنا نبيع جميع انواع الهكرات لجميع العاب الاونلاين مثل فري فاير ماين كرافت متء سامب  و العديد من الالعاب المتنوعة</h2>
+    <p>تعريف للسيرفر تمت برمجته من قبل الديفلوبر تقي الباي هو سيرفر شوب نبيع فيه الهكرات برصيد الجوال او  بعملة الديسكوردالكريديت يمكنك الدخول لسيرفار الديسكورد الخاص بنا من الرابط الموجود في الاسفل
+</p>
+
+    <h3>تابعنا على:</h3>
+    <div class="social-links">
+      <a href="https://instagram.com/ta9i2025" target="_blank">📸 Instagram</a>
+      <a href="https://youtube.com/@ANIME_GAMR" target="_blank">📺 YouTube</a>
+      <a href="https://tiktok.com/@pc_taki" target="_blank">🎵 TikTok</a>
+      <a href="https://discord.gg/UHMm9tcv" target="_blank">💬 Discord</a>
+    </div>
+
+    <!-- نص فوق الصورة -->
+<h3 style="margin-top: 40px; color: #2e8b57;">من بين العاب الباتل رويال تاتين لعبة فري فاير والتي حققة شهرة واسعة ولاكن للاسف امتلءت هذه اللعب في الفترات الاخيرة بالهكرات و انت مللت من العب معهم اليوم جبت لك الحل انت محضوض لانك زرة موقع باست شوب اليوم لاني جبت لك اقوا الهكرات في فري فاير اضغط على الصورة لتحميل الهكرات</h3>
+
+<!-- الصورة -->
+<div class="image-link-box" onclick="goToNewPage()">
+  <img src="images.jpg" alt="واجهة جديدة">
+</div>
+
+<!-- زر تسجيل الخروج -->
+<button class="logout-btn" onclick="logout()">تسجيل الخروج</button>
+
+  </div>
+
+  <script>
+    // التحقق من الدخول
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+      window.location.href = "index.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html";
+    }
+
+    function goToNewPage() {
+      window.location.href = "newpage.html";
+    }
+  </script>
+
+</body>
+</html>
+
